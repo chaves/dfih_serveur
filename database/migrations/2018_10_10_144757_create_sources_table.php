@@ -15,6 +15,8 @@ class CreateSourcesTable extends Migration
     {
         Schema::create('sources', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('corporation');
+            $table->date('infodate');
             $table->text('texte');
             $table->boolean('valide')->default(0);
             $table->timestamps();

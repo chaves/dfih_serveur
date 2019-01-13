@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Regle;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreRegle;
 
 class RegleController extends Controller
 {
@@ -24,17 +23,17 @@ class RegleController extends Controller
           'montant' => 'required',
           'unite' => 'required',
           'cible' => 'required',
-          'ordre' => 'required',
+          'order_regle' => 'required',
         ]);
 
         $regle= new Regle();
 
-        $regle->source_id  = $validatedData['source_id'];
-        $regle->niveau     = $validatedData['niveau'];
-        $regle->montant    = $validatedData['montant'];
-        $regle->unite      = $validatedData['unite'];
-        $regle->cible      = $validatedData['cible'];
-        $regle->ordre      = $validatedData['ordre'];
+        $regle->source_id   = $validatedData['source_id'];
+        $regle->niveau      = $validatedData['niveau'];
+        $regle->montant     = $validatedData['montant'];
+        $regle->unite       = $validatedData['unite'];
+        $regle->cible       = $validatedData['cible'];
+        $regle->order_regle = $validatedData['order_regle'];
 
         $regle->cible_si_independant = '';
         $regle->exception = '';

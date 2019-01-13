@@ -13,7 +13,7 @@ class Regle extends Model
         'montant',
         'unite',
         'cible',
-        'ordre',
+        'order_regle',
         'flag_chiffre_independant_des_benefs',
         'cible_si_independant',
         'exception',
