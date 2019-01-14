@@ -20,7 +20,7 @@ class CreateReglesTable extends Migration
             $table->enum('niveau', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])->default(1);
             $table->string('montant');
             $table->string('unite');
-            $table->enum('order_regle', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])->default(1);
+            $table->enum('ordre', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20])->default(1);
             $table->string('cible');
             $table->boolean('flag_chiffre_independant_des_benefs')->default(0);
             $table->string('cible_si_independant')->default('');;

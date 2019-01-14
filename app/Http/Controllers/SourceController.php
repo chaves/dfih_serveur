@@ -9,12 +9,12 @@ class SourceController extends Controller
 {
     public function index()
     {
-        return Source::where('valide', 0)->paginate(7);
+        return Source::where('valide', 0)->paginate(10);
     }
 
     public function valides()
     {
-        return Source::where('valide', 1)->paginate(7);
+        return Source::where('valide', 1)->paginate(10);
     }
 
     public function show(Request $request)

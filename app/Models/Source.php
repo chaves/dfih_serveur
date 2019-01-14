@@ -16,7 +16,7 @@ class Source extends Model
 
     public function regles()
     {
-        return $this->hasMany('App\Models\Regle')->orderBy('order_regle');
+        return $this->hasMany('App\Models\Regle')->orderBy('ordre');
     }
 
     public function scopeFindId($query, $source_id)
