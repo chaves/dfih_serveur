@@ -23,7 +23,7 @@ class RegleController extends Controller
           'montant' => 'required',
           'unite' => 'required',
           'cible' => 'required',
-          'order_regle' => 'required',
+          'ordre' => 'required',
         ]);
 
         $regle= new Regle();
@@ -33,7 +33,7 @@ class RegleController extends Controller
         $regle->montant     = $validatedData['montant'];
         $regle->unite       = $validatedData['unite'];
         $regle->cible       = $validatedData['cible'];
-        $regle->order_regle = $validatedData['order_regle'];
+        $regle->ordre = $validatedData['ordre'];
 
         $regle->cible_si_independant = '';
         $regle->exception = '';
