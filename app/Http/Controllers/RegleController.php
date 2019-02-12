@@ -20,7 +20,6 @@ class RegleController extends Controller
         $validatedData = $request->validate([
           'source_id' => 'required',
           'niveau' => 'required',
-          'montant' => 'nullable',
           'unite' => 'required',
           'cible' => 'required',
           'ordre' => 'required',
@@ -30,10 +29,11 @@ class RegleController extends Controller
 
         $regle->source_id   = $validatedData['source_id'];
         $regle->niveau      = $validatedData['niveau'];
-        $regle->montant     = $validatedData['montant'];
         $regle->unite       = $validatedData['unite'];
         $regle->cible       = $validatedData['cible'];
         $regle->ordre = $validatedData['ordre'];
+
+        $regle->montant    = $request->input('montant');
 
         $regle->cible_si_independant = '';
         $regle->exception = '';
