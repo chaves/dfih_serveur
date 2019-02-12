@@ -20,7 +20,7 @@ class RegleController extends Controller
         $validatedData = $request->validate([
           'source_id' => 'required',
           'niveau' => 'required',
-          'montant' => 'required',
+          'montant' => '',
           'unite' => 'required',
           'cible' => 'required',
           'ordre' => 'required',
