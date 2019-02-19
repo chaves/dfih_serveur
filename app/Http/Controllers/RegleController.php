@@ -41,6 +41,8 @@ class RegleController extends Controller
         $regle->max = '';
 
         $regle->save();
+
+        return $regle->id;
     }
 
     public function updateItem(Request $request)
