@@ -9,7 +9,7 @@ class SourceController extends Controller
 {
     public function index()
     {
-        return Source::where('valide', 0)->paginate(10);
+        return Source::where('valide', 0)->orderBy('corporation', 'asc', 'infodate', 'asc')->paginate(10);
     }
 
     public function valides()
