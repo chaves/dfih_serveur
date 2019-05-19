@@ -15,6 +15,7 @@
 Route::get('regles', 'RegleController@index')->name('regles');
 
 Route::get('sources', 'SourceController@index')->name('sources');
+Route::post('sources/import', 'SourceController@import_source_id')->name('importSource');
 
 Route::get('valides', 'SourceController@valides')->name('valides');
 

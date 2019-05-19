@@ -29,4 +29,9 @@ class Regle extends Model
     {
         return $query->where('id', $regle_id);
     }
+
+    public function scopeFindSourceId($query, $source_id)
+    {
+        return $query->where('source_id', $source_id);
+    }
 }
